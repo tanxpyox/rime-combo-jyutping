@@ -4,6 +4,8 @@
 Dependencies:
 rime-cantonese
 
+改編自 rime/rime-combo-pinyin 同埋 rime/rime-cantonese
+
 Task list:
 1. 搵常用字表計算各聲符頻率
 2. 枚舉所有粵語嘅聲符組合，完成斷詞filter
