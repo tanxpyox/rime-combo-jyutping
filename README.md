@@ -6,6 +6,9 @@ UNDER CONSTRUCTION 開發中
 Dependencies:
 rime-cantonese
 
+東風破口令：`rime-install tanxpyox/rime-combo-jyutping`
+
+
 改編自 rime/rime-combo-pinyin 同埋 rime/rime-cantonese
 
 Task list:
