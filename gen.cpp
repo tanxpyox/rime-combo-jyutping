@@ -12,15 +12,17 @@ int main () {
 
   freopen("dict.txt","r",stdin);
   int count=0;
-  while ( getline(cin,s3) ){
-    if(s3=="break") break;
+  while ( true ){
+    getline(cin,s3);
+    cout << s3 << endl;
+    if (s3=="break") break;
     istringstream iss(s3);
     iss >> s1 >> s2;
     d[s1] = s2;
 
   }
 
-  cout << d.size() << endl;
+  cout << s3 << endl;
 /*
   for(map<string,string>::iterator it=d.begin(); it!=d.end(); ++it){
     cout << it->first << " " << it->second << endl;
@@ -28,6 +30,7 @@ int main () {
 
 */
   string line;
+  freopen("out.txt","w",stdout);
   while (getline(cin,line)) {
     istringstream is2(line);
     is2 >> s1 >> s2 >> s3 >> s4 >> s5 >> s6 >> s7 >> s8;
