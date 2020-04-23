@@ -12,7 +12,8 @@ rime-cantonese
 改編自 rime/rime-combo-pinyin 同埋 rime/rime-cantonese
 
 Task list:
-1. 搵常用字表計算各聲符頻率
-2. 枚舉所有粵語嘅聲符組合，完成斷詞filter
-3. 決定鍵盤排位
-4. 決定容錯機制
+1. [列出粵語所有聲符（同埋將佢哋約簡)](https://github.com/tanxpyox/rime-combo-jyutping/wiki/%E7%B2%B5%E8%AA%9E%E8%81%B2%E7%AC%A6%E8%80%83%E5%AF%9F)
+2. 搵常用字表計算各聲符頻率
+3. 枚舉所有粵語嘅聲符組合，完成斷詞filter
+4. 決定鍵盤排位
+5. 決定容錯機制
