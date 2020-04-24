@@ -12,7 +12,7 @@ schema:
     並擊輸入粵拼
     暫只支持eng-US鍵盤
     tanxpyox/rime-combo-jyutping
-  
+
   dependencies:
     - jyut6ping3 #支援正常粵拼反查
 
@@ -102,89 +102,86 @@ speller:
 
     # 取消下行註釋，支援聲母簡拼
     #- abbrev/^(gw|kw|ng).+$/$1/
-    
+
 # under construction +++++++++++ BEGIN +++++++++++++
 chord_composer:
   # 字母表，包含用於並擊的按鍵
   # 擊鍵雖有先後，形成並擊時，一律以字母表順序排列
-  alphabet: "swxdecfrvgtbnjum ki,lo."
+  alphabet: "aqswxdecfrvgtj; hnumkilop"
   # 拼寫運算規則，將一組並擊編碼轉換爲拼音音節
   algebra:
     # 先將物理按鍵字符對應到宮保拼音鍵位中的拼音字母
-    - 'xlit|swxdecfrvgtbnjum ki,lo.|sczhlfgdbktpRiuVaNIUeoE|'
+    - 'xlit|aqswxdecfrvgtj; hnumkilop|pbsmfgkdznchtiuAeovNKMPI|'
     # 以下根據宮保拼音的鍵位分別變換聲母、韻母部分
     # 組合聲母
-    - xform/^zf/zh/
-    - xform/^cl/ch/
-    - xform/^fb/m/
-    - xform/^ld/n/
-    - xform/^hg/r/
-    
-    # g,k,h 接 i/ü 時作 ji/ju, qi/qu, xi/xu
-    - xform/^[gz]([iV])/j$1/
-    - xform/^[kc]([iV])/q$1/
-    - xform/^[hs]([iV])/x$1/
-    
+    - xform/^gz/l/
+    - xform/^kn/ng/
+    - xform/^dc/t/
+
     # 空格鍵單擊時產生空白
-    - 'xform/^a$/ /'
-    
-    # 特例：以組合鍵[ae]輸入拼音‹a›
-    - xform/ae$/a/
-    # 單擊時產生字符 , .
-    - xform/^U$/,/
-    - xform/^E$/./
-    # 上排三鍵並擊 ong, uang
-    - xform/(ua?)Io$/$1Ne/
-    - xform/aI$/ai/
-    - xform/I[oe]$/ei/
-    - xform/uI$/uei/
-    # I 鍵亦可用作韻母 ‹i›
-    - xform/^gI$/ji/
-    - xform/^kI$/qi/
-    - xform/^hI$/xi/
-    - xform/I$/i/
-    # 下排三鍵並擊 iong
-    - xform/VUE$/VNe/
-    # [ü] 活用爲介音 ‹i-› 以利於並擊 iao, iu
-    - xform/V(a?)U$/i$1U/
-    - xform/aU$/ao/
-    - xform/UE?$/ou/
-    - xform/([aiuV])Ne$/$1ng/
-    # ‹eng› 省略 ‹e›
-    - xform/Ne$/eng/
-    - xform/^ung$/weng/
-    - xform/ung$/ong/
-    - xform/Vng$/iong/
-    - xform/([aiuV])N$/$1n/
-    # ‹en› 省略 ‹e›
-    - xform/N$/en/
-    - xform/^un$/wen/
-    - xform/R$/er/
-    # 漢語拼音方案的拼寫規則
-    - xform/^i(ng?)$/yi$1/
-    - xform/^i$/yi/
-    - xform/^i/y/
-    - xform/^u$/wu/
-    - xform/^u/w/
-    - xform/^V/yu/
-    - xform/^([jqx])V/$1u/
-    # 容錯
-    - xform/^([zcsr]h?)i([aoe])/$1$2/
-    - xform/^([zcsr]h?)i(ng?)$/$1e$2/
-    # 拼寫規則
-    - xform/iou$/iu/
-    - xform/uei$/ui/
-    - xlit/VE/ve/
+    - 'xform/^A$/ /'
+
+    # 特例：以組合鍵[am]輸入拼音‹aa›
+    - xform/^Av$/aa/
+    # 單擊時產生字符 ;
+    - xform/^u$/;/
+
+    # 韻母連擊
+    - xform/KP$/t/
+    - xform/NM$/ng/
+
+    # i/u/yu 當聲母使用 kw,gw
+    - xform/^i([AeovO])/j$1/
+    - xform/^iu$/jau/
+    - xform/^iI$/jai/
+    - xform/^i/ji/
+
+    - xform/^u/wu/
+    - xform/^u([AeioO])/w$1/
+    - xform/^ku([AeioO])/kw$1/
+    - xform/^gu([AeioO])/gw$1/
+
+
+    - xform/^yu/jyu/
+
+
+    # 韻尾省略 ‹a›
+    - xform/[^AeiouvOa]I$/ai/
+    - xform/[^AeiouvOa]u$/au/
+    - xform/[^AeiouvO]ng$/ang/
+    - xform/[^AeiouvO]N$/an/
+    - xform/[^AeiouvO]M$/am/
+    - xform/[^AeiouvO]P$/ap/
+    - xform/[^AeiouvO]t$/at/
+    - xform/[^AeiouvO]t$/ak/
+
+
+    # eo/oe 轉換
+    - xform/O$/oe/
+    - xform/O(ng|K)$/oe$1/
+    - xform/O(I|N|t)$/eo$1/
+
+    #大寫轉換
+    - xform/([AeiouvOa])I$/$1i/
+    - xform/([AeiouvO])N$/$1n/
+    - xform/([AeiouvO])M$/$1m/
+    - xform/([AeiouvO])P$/$1p/
+    - xform/([AeiouvO])t$/$1t/
+    - xform/([AeiouvO])t$/$1k/
+
+    #aa 轉換
+    - xform/A/aa/
+
   # 並擊完成後套用的式樣
   output_format:
     # 追加隔音符號
-    - "xform/^([bpm])([iu]|a|i?e|o|[ae]i|i?ao|[oi]u|i?an|[ie]n|[ei]ng|ang|ong)$/$1$2'/"
-    - "xform/^([fw])(u|a|o|[ae]i|ao|ou|an|en|eng|ang|ong)$/$1$2'/"
-    - "xform/^([dtnl])([iuv]|i?a|[iv]?e|u?o|[aeu]i|i?ao|[oi]u|[iu]?an|[iue]n|[ei]ng|i?ang|ong)$/$1$2'/"
-    - "xform/^([gkh])(u|u?a|e|uo|u?ai|[ue]i|ao|ou|u?an|[ue]n|eng|u?ang|ong)$/$1$2'/"
-    - "xform/^([zcs]h?|r)([iu]|u?a|e|uo|u?ai|[ue]i|ao|ou|u?an|[ue]n|eng|u?ang|ong)$/$1$2'/"
-    - "xform/^([jqxy])([iu]|i?a|[iu]?e|o|i?ao|[oi]u|[iu]?an|[iu]n|ing|i?ang|i?ong)$/$1$2'/"
-    - "xform/^([aeo]|[ae]i|ao|ou|[ae]ng?|er)$/$1'/"
+#    - "xform/^([bpm])([iu]|a|i?e|o|[ae]i|i?ao|[oi]u|i?an|[ie]n|[ei]ng|ang|ong)$/$1$2'/"
+#    - "xform/^([fw])(u|a|o|[ae]i|ao|ou|an|en|eng|ang|ong)$/$1$2'/"
+#    - "xform/^([dtnl])([iuv]|i?a|[iv]?e|u?o|[aeu]i|i?ao|[oi]u|[iu]?an|[iue]n|[ei]ng|i?ang|ong)$/$1$2'/"
+#    - "xform/^([gkh])(u|u?a|e|uo|u?ai|[ue]i|ao|ou|u?an|[ue]n|eng|u?ang|ong)$/$1$2'/"
+#    - "xform/^([zcs]h?|r)([iu]|u?a|e|uo|u?ai|[ue]i|ao|ou|u?an|[ue]n|eng|u?ang|ong)$/$1$2'/"
+#    - "xform/^([jqxy])([iu]|i?a|[iu]?e|o|i?ao|[oi]u|[iu]?an|[iu]n|ing|i?ang|i?ong)$/$1$2'/"
+#    - "xform/^([aeo]|[ae]i|ao|ou|[ae]ng?|er)$/$1'/"
     # 消除不構成合法音節的並擊組合
     - "erase/^([A-Za-z]+)$/"
   # 並擊過程中套用的式樣
@@ -229,7 +226,7 @@ emoji_suggestion:
   opencc_config: emoji.json
   option_name: emoji_suggestion
   tips: all
-  
+
 punctuator:
   import_preset: default
 
