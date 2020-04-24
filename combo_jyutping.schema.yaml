@@ -131,10 +131,10 @@ chord_composer:
 
     # i/當聲母用
     - xform/^i$/ji/
-    - xform/^i([AeovOIXNMPTK])/j$1/
+    - xform/^i([XK])/ji$1/
+    - xform/^i([AeovOINMPT])/j$1/
     - xform/^iu$/jau/
     - xform/^iI$/jaI/
-    - xform/^i([XK])/ji$1/
 
     #u起首嘅字轉換成w
     - xform/^u([AeioOINT])/w$1/
