@@ -4,7 +4,7 @@
 schema:
   schema_id: combo_jyutping
   name: 宮保粵拼
-  version: "0.0.1"
+  version: "0.0.2"
   author:
     - 亶父 <tanxpyox@gmail.com>
     - 佛振 (輸入部分由其【宮保拼音】改編而來）
