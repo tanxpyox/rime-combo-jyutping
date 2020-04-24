@@ -112,7 +112,7 @@ chord_composer:
   # 拼寫運算規則，將一組並擊編碼轉換爲拼音音節
   algebra:
     # 先將物理按鍵字符對應到宮保拼音鍵位中的拼音字母
-    - 'xlit|aqswxdecfrvgtj; hnumkilop|pbsmfgkdznchtiuAeovNKMPI|'
+    - 'xlit|aqswxdecfrvgtj; hnumkilop|pbsmfgkdznchtiuAeOovNKMPI|'
     # 以下根據宮保拼音的鍵位分別變換聲母、韻母部分
     # 組合聲母
     - xform/^gz/l/
