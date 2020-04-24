@@ -10,6 +10,7 @@ schema:
     - 佛振 (輸入部分由其【宮保拼音】改編而來）
   description: |-
     並擊輸入粵拼
+    內部測試（請勿使用）
     暫只支持eng-US鍵盤
     tanxpyox/rime-combo-jyutping
 
