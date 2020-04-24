@@ -133,7 +133,8 @@ chord_composer:
     - xform/^i([AeovOIXNMPTK])/j$1/
     - xform/^iu$/jau/
     - xform/^iI$/jaI/
-    - xform/^i([^AaeuovO])/ji$1/
+    - xform/^i([XNMPTK])/ji$1/
+    - xform/^i$/ji/
 
     #u起首嘅字轉換成w
     - xform/^u([AeioOINT])/w$1/
