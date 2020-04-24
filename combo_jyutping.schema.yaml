@@ -134,8 +134,8 @@ chord_composer:
     - xform/^i([XK])/ji$1/
     - xform/^i([AeovOINMPT])/j$1/
     - xform/^iu$/jau/
+    - xform/^iu/ju/
     - xform/^iI$/jaI/
-
     #特別鍵碼輸入wu （因爲單擊u會默認轉換成au)
     - xform/^uv$/wU/
     - xform/uv([^KX])/wU$1/
@@ -168,7 +168,10 @@ chord_composer:
     - xform/^([IXNMPTK])$/a$1/
     - xform/([^AeiouvOa])u$/$1au/
     # u次序轉換
-    - xform/u([AaeoO])/$1u
+    - xform/u([AaeoO])/$1u/
+    #容錯
+    - xform/i([AaeoO])/$1i/
+
     # eo/oe 轉換
     - xform/O$/oe/
     - xform/O(X|K)$/oe$1/
