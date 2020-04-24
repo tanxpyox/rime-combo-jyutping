@@ -108,11 +108,11 @@ speller:
 chord_composer:
   # 字母表，包含用於並擊的按鍵
   # 擊鍵雖有先後，形成並擊時，一律以字母表順序排列
-  alphabet: "aqswxdecfrvgtbj; hnumkilop"
+  alphabet: "aqswxdecfrvgtbj; hnumlkiop"
   # 拼寫運算規則，將一組並擊編碼轉換爲拼音音節
   algebra:
     # 先將物理按鍵字符對應到宮保拼音鍵位中的拼音字母
-    - 'xlit|aqswxdecfrvgtbj; hnumkilop|pbsmfgkdznchtjiuAeOovNKMPI|'
+    - 'xlit|aqswxdecfrvgtbj; hnumlkiop|pbsmfgkdznchtjiuAeOovMNKPI|'
     # 以下根據宮保拼音的鍵位分別變換聲母、韻母部分
     # 組合聲母
     - xform/^gz/l/
@@ -127,7 +127,7 @@ chord_composer:
 
     # 韻母連擊
     - xform/KP$/T/
-    - xform/NM$/X/
+    - xform/MN$/X/
 
     # i/當聲母用
     - xform/^i$/ji/
@@ -137,7 +137,7 @@ chord_composer:
     - xform/^iI$/jaI/
 
     #特別鍵碼輸入wu （因爲單擊u會默認轉換成au)
-    - xform/^uM/wU/
+    - xform/^uM$/wU/
     - xform/uM/U/
     #u起首嘅字轉換成w
     - xform/^u([AeioOINT])/w$1/
