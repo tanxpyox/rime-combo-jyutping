@@ -136,6 +136,9 @@ chord_composer:
     - xform/^iu$/jau/
     - xform/^iI$/jaI/
 
+    #特別鍵碼輸入wu （因爲單擊u會默認轉換成au)
+    - xform/^uM/wU/
+    - xform/uM/U/
     #u起首嘅字轉換成w
     - xform/^u([AeioOINT])/w$1/
 
@@ -147,9 +150,7 @@ chord_composer:
     #提供gw與kw嘅另一個指法（主要用於輸入gwan,gwai,gwang,kwai,kwan之類嘅音）
     - xform/^sg/gw/
     - xform/^mk/kw/
-    #特別鍵碼輸入wu （因爲單擊u會默認轉換成au)
-    - xform/uM/U/
-    - xform/^u$/wu/
+
     #保留uk,ung
     - xform/^u([KX])/U$1/
     #u+韻尾--> wu韻尾
