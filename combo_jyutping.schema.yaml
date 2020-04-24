@@ -173,9 +173,8 @@ chord_composer:
     - xform/i([AaeoO])/$1i/
 
     # eo/oe 轉換
-    - xform/O$/oe/
-    - xform/O(X|K)$/oe$1/
-    - xform/O(I|N|T)$/eo$1/
+    - xform/O([INPTK])$/eo$1/
+    - xform/O/oe/
     #代號轉換
     - xform/A/aa/
     - xform/X/ng/
