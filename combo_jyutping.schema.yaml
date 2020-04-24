@@ -147,7 +147,7 @@ chord_composer:
     - xform/^sg/gw/
     - xform/^mk/kw/
     #特別鍵碼輸入wu （因爲單擊u會默認轉換成au)
-    - xform/^uM$/wu/
+    - xform/^uM$/wU/
     #保留uk,ung
     - xform/^u([KX])/U$1/
     #u+韻尾--> wu韻尾
