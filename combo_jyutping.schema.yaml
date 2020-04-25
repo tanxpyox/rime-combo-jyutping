@@ -129,25 +129,23 @@ chord_composer:
     - xform/KP$/T/
     - xform/NM$/X/
 
-    # i/當聲母用
+    # i當聲母用 --> j-
     - xform/^i$/ji/
     - xform/^i([XK])/ji$1/
     - xform/^i([AeovOINMPT])/j$1/
     - xform/^iu$/jau/
     - xform/^iu/ju/
     - xform/^iI$/jaI/
+    
     #特別鍵碼輸入wu （因爲單擊u會默認轉換成au)
     - xform/^uv$/wU/
     - xform/^uM$/wU/
-    - xform/^uM([^Kx])/wU$1/
     - xform/^uv([^KX])/wU$1/
     - xform/uv/U/
 
     #u起首嘅字轉換成w
     - xform/^u([AeioOINT])/w$1/
 
-    #強制u韻鍵法
-    - xform/^([fgkw])uv/$1U/
     #gu或者ku跟韻母（u除外）自動轉換成gw，kw聲母；gk接u韻則保留
     - xform/^ku([AiOMPT])/kw$1/
     - xform/^gu([AiOMPT])/gw$1/
@@ -161,8 +159,12 @@ chord_composer:
     - xform/^u([INMPT])/wu$1/
     #單擊[u]變成[au]
     - xform/^u$/au/
+    #/ui/韻特別鍵法
+    - xform/vI/UI/
+    
     #yu --> 自動變成jyu
     - xform/^v/jv/
+
 
 
     # 韻尾省略 ‹a›
@@ -175,7 +177,7 @@ chord_composer:
     - xform/i([AaeoO])/$1i/
 
     # eo/oe 轉換
-    - xform/O([INPTK])$/eo$1/
+    - xform/O([INT])$/eo$1/ 
     - xform/O/oe/
     #代號轉換
     - xform/A/aa/
