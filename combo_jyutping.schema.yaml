@@ -135,12 +135,13 @@ chord_composer:
     - xform/^iu$/jau/
     - xform/^iu/ju/
     - xform/^iI$/jaI/
-    
-    #特別鍵碼輸入wu （因爲單擊u會默認轉換成au)
+
+    #特別鍵碼輸入wu/u韻 （因爲單擊u會默認轉換成au)
     - xform/^uv$/wU/
     - xform/^uM$/wU/
     - xform/^uv([^KX])/wU$1/
     - xform/uv/U/
+    - xform/u([AeioO])v/$1U/
 
     #u起首嘅字轉換成w
     - xform/^u([AeioOINT])/w$1/
@@ -160,7 +161,7 @@ chord_composer:
     - xform/^u$/au/
     #/ui/韻特別鍵法
     - xform/vI/UI/
-    
+
     #yu --> 自動變成jyu
     - xform/^v/jv/
 
@@ -176,7 +177,7 @@ chord_composer:
     - xform/i([AaeoO])/$1i/
 
     # eo/oe 轉換
-    - xform/O([INT])$/eo$1/ 
+    - xform/O([INT])$/eo$1/
     - xform/O/oe/
     #代號轉換
     - xform/A/aa/
