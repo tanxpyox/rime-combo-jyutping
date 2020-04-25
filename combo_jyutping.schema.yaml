@@ -138,7 +138,9 @@ chord_composer:
     - xform/^iI$/jaI/
     #特別鍵碼輸入wu （因爲單擊u會默認轉換成au)
     - xform/^uv$/wU/
-    - xform/uv([^KX])/wU$1/
+    - xform/^uM$/wU/
+    - xform/^uM([^Kx])/wU$1/
+    - xform/^uv([^KX])/wU$1/
     - xform/uv/U/
 
     #u起首嘅字轉換成w
