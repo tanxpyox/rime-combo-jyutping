@@ -1,11 +1,11 @@
-並擊輸入粵語方案（依rime-combo-pinyin取名: 宮保粵拼)
+#Rime 並擊輸入粵語方案
 
-東風破口令：`rime-install tanxpyox/rime-combo-jyutping`
+配方：℞ `tanxpyox/rime-combo-jyutping`
+
+本方案係[宮保拼音](https://github.com/rime/rime-combo-pinyin)嘅粵拼改編，其中鍵盤排位經過定製，以配合粵語使用者嘅語言習慣。
 
 Dependencies:
 [rime-cantonese](https://github.com/rime/rime-cantonese)
-
-改編自 rime/rime-combo-pinyin 同埋 rime/rime-cantonese。
 
 Task list:
 1. [列出粵語所有音素（同埋將佢哋約簡)](https://github.com/tanxpyox/rime-combo-jyutping/wiki/%E7%B2%B5%E8%AA%9E%E8%81%B2%E7%AC%A6%E8%80%83%E5%AF%9F)
