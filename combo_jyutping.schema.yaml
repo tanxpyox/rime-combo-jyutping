@@ -149,8 +149,8 @@ chord_composer:
     #強制u韻鍵法
     - xform/^([fgkw])uv/$1U/
     #gu或者ku跟韻母（u除外）自動轉換成gw，kw聲母；gk接u韻則保留
-    - xform/^ku([AeioOMPT])/kw$1/
-    - xform/^gu([AeioOMPT])/gw$1/
+    - xform/^ku([AiOMPT])/kw$1/
+    - xform/^gu([AiOMPT])/gw$1/
     - xform/^([gk])iu([IXNMPTK])/$1wi$2/
     #提供gw與kw嘅另一個指法（主要用於輸入gwan,gwai,gwang,kwai,kwan之類嘅音）
     - xform/^sg/gw/
