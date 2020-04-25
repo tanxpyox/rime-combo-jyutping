@@ -4,7 +4,7 @@
 schema:
   schema_id: combo_jyutping
   name: 宮保粵拼
-  version: "0.0.3"
+  version: "20200425"
   author:
     - 亶父 <tanxpyox@gmail.com>
     - 佛振 (輸入部分由其【宮保拼音】改編而來）
@@ -104,7 +104,6 @@ speller:
     # 取消下行註釋，支援聲母簡拼
     #- abbrev/^(gw|kw|ng).+$/$1/
 
-# under construction +++++++++++ BEGIN +++++++++++++
 chord_composer:
   # 字母表，包含用於並擊的按鍵
   # 擊鍵雖有先後，形成並擊時，一律以字母表順序排列
@@ -222,7 +221,6 @@ chord_composer:
   prompt_format:
     # 加方括弧
     - "xform/^(.*)$/[$1]/"
-#under construction --------------------END---------------------------
 
 translator:
   dictionary: jyut6ping3
