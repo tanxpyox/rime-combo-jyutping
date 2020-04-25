@@ -3,7 +3,7 @@
 東風破口令：`rime-install tanxpyox/rime-combo-jyutping`
 
 Dependencies:
-[rime-cantonese] (https://github.com/rime/rime-cantonese)
+[rime-cantonese](https://github.com/rime/rime-cantonese)
 
 改編自 rime/rime-combo-pinyin 同埋 rime/rime-cantonese。
 
