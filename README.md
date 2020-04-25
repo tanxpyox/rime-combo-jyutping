@@ -7,7 +7,7 @@
 ***安裝須知***:
 * 由於本方案要求用家同時按下2-5鍵嚟鍵入拼音，一般鍵盤上可能會出現「鬼鍵」嘅情況，無法同時錄入用家嘅按鍵組合。
   * 出現呢個情況嘅時後，用家可以逐一放開手指，令電腦捕捉按鍵訊號。
-  * 長遠計，用家可以選購支援「防鬼鍵」("Anti ghosting")或者「N鍵齊按」("N-Key Rollover")嘅鍵盤，充分發揮本方案嘅潛力。
+  * 長遠計，用家可以選購支援「防鬼鍵」("Anti-Ghosting") 或者「N鍵齊按」("N-Key Rollover") 嘅鍵盤，充分發揮本方案嘅潛力。
 * 本方案嘅詞庫依賴 [rime-cantonese](https://github.com/rime/rime-cantonese)，所以喺使用本方案之前，請先以`bash rime-install cantonese`口令下載相關檔案。
 
 Task list:
