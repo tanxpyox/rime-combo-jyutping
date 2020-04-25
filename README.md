@@ -10,7 +10,7 @@
   * 長遠計，用家可以選購支援「防鬼鍵」("Anti-Ghosting") 或者「N鍵齊按」("N-Key Rollover") 嘅鍵盤，充分發揮本方案嘅潛力。
 * 本方案嘅詞庫依賴 [rime-cantonese](https://github.com/rime/rime-cantonese)，所以喺使用本方案之前，請先以`bash rime-install cantonese`口令下載相關檔案。
 
-Task list:
+***開發步驟（參考用）***:
 1. [列出粵語所有音素（同埋將佢哋約簡)](https://github.com/tanxpyox/rime-combo-jyutping/wiki/%E7%B2%B5%E8%AA%9E%E9%9F%B3%E7%B4%A0%E8%80%83%E5%AF%9F)
 2. [搵常用字表](https://github.com/tanxpyox/rime-combo-jyutping/blob/fq-calc/out.txt)計算[各音素頻率](https://github.com/tanxpyox/rime-combo-jyutping/wiki/2000%E5%B8%B8%E7%94%A8%E5%AD%97%E9%9F%B3%E7%B4%A0%E7%B5%B1%E8%A8%88)
 3. [枚舉所有粵語嘅音節組合](https://github.com/tanxpyox/rime-combo-jyutping/wiki/%E7%B2%B5%E8%AA%9E%E9%9F%B3%E7%AF%80%E6%9E%9A%E8%88%89)，完成斷詞filter
